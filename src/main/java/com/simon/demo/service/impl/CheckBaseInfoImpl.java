@@ -22,7 +22,7 @@ public class CheckBaseInfoImpl implements CheckService {
     public void check(OrderMain orderMain) {
         OrderParam orderParam = orderMain.getOrderParam();
         if (orderParam.getOrderAmount() == null) {
-            throw new RuntimeException("订单金额不能为空！");
+            throw new RuntimeException("订单的金额不能为空！");
         }
         Order order = orderMain.getOrder();
         order.setMemo(orderParam.getMemo());
