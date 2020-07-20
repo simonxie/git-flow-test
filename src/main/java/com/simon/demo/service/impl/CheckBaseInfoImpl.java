@@ -26,6 +26,7 @@ public class CheckBaseInfoImpl implements CheckService {
         }
         Order order = orderMain.getOrder();
         order.setMemo(orderParam.getMemo());
+        log.info(orderParam.getMemo());
         order.setOrderAmount(orderParam.getOrderAmount());
     }
 }
