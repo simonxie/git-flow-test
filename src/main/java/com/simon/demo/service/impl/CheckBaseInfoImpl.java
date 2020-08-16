@@ -25,9 +25,7 @@ public class CheckBaseInfoImpl implements CheckService {
             throw new RuntimeException("订单的金额不能为空！");
         }
         Order order = orderMain.getOrder();
-        log.info(orderParam.getOrderAmount().toString());
         order.setMemo(orderParam.getMemo());
-        log.info(orderParam.getMemo());
         order.setOrderAmount(orderParam.getOrderAmount());
     }
 }
