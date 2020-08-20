@@ -25,7 +25,7 @@ public class CheckExistImpl implements CheckService {
         OrderParam orderParam = orderMain.getOrderParam();
         OrderGoodsParam orderGoodsParam = orderParam.getOrderGoodsParam();
         if (orderGoodsParam == null) {
-            throw new RuntimeException("商品不存在");
+            throw new RuntimeException("商品不存在，请确认");
         }
         OrderGoods orderGoods = orderMain.getOrderGoods();
         orderGoods.setGoodsId(orderGoodsParam.getGoodsId());
